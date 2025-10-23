@@ -30,5 +30,25 @@ int main() {
         printf("Esquerda\n");
         k++;
     } while (k < casasRainha);
+
+    // Constantes para o número de casas do cavalo
+    const int casasBaixo = 2;
+    const int casasEsquerda = 1;
+
+    // Implementação de Movimentação do Cavalo
+    // Utiliza estrutura for para o Loop externo: mover 2 casas para baixo
+    printf("\nMovimento do Cavalo:\n");
+    for (int i = 0; i < casasBaixo; i++) {
+        printf("Baixo\n");
+
+        //  Utiliza estrutura while para o Loop interno: mover 1 casa para a esquerda 
+        int l = 0;
+        while (l < casasEsquerda && i == casasBaixo - 1) {
+            // Só move para a esquerda após completar os dois movimentos para baixo
+            printf("Esquerda\n");
+            l++;
+        }
+    }
+
     return 0;
 }
